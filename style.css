@@ -1,0 +1,839 @@
+@charset "utf-8";
+/*
+YUI 3.18.1 (build f7e7bcb)
+Copyright 2014 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+http://yuilibrary.com/license/
+*/
+
+html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;*font-size:100%}legend{color:#000}#yui3-css-stamp.cssreset{display:none}
+
+/* メインビジュアル */
+.main_v{
+    position: relative;
+    z-index: 0;
+    margin: 5px;
+    height: 900px;
+    background: url(./img/img_001.jpg);
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+.main_v .filter{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .4;
+
+}
+
+.main_v header{
+    position: relative;
+    z-index: 2;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ロゴ部分 */
+.main_v header h1{
+    padding: 1em 2em 0 0;
+}
+
+.main_v header h1 a{
+    color: #FFF;
+    font-size: 2em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* メニュー部分 */
+.main_v header nav{
+    flex: 1;
+
+}
+
+.main_v header nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main_v header nav ul li{
+    margin: 1.7em 0;
+}
+
+.main_v header nav ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+/* ハンバーガーメニュー */
+.main_v header .hbg_menu{
+    position: fixed;
+    top: 1em;
+    right: 2em;
+    width: 50px;
+    height: 50px;
+    display: none;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: flex-end;
+}
+
+.main_v header .hbg_menu .inbox_1,
+.main_v header .hbg_menu .inbox_2,
+.main_v header .hbg_menu .inbox_3{
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+}
+
+.main_v header .hbg_menu .inbox_2{
+    width: 66%;
+}
+
+.main_v header .hbg_menu .inbox_3{
+    width: 39%;
+}
+
+@media screen and (max-width:1050px) {
+    .main_v header h1{
+        position: fixed;
+        top: 1em;
+        left: 2em;
+        padding: 0;
+        
+    }
+    .main_v header nav ul{
+        display: none;
+    }
+    .main_v header .hbg_menu{
+        display: flex;
+    }
+}
+
+/* メニュー表示レスポンシブ */
+.sp_nav_waku{
+    display: none;
+}
+.main_v .sp_nav_waku .sp_nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index:9999;
+    width: 80%;
+    height: 100vh;
+    background-color: #eee;
+    opacity: 0.95;
+}
+
+.main_v .sp_nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.main_v .sp_nav nav ul{
+    width: 100%;
+}
+
+.main_v .sp_nav nav ul li{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.main_v .sp_nav nav ul li a{
+    display: block;
+    margin: .5em;
+    width: 20em;
+    height: 5em;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #00003b;
+    text-align: center;
+    line-height: 5em;
+}
+
+
+/*　真ん中のコメント */
+.main_v .comment{
+    position: relative;
+    z-index: 2;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.main_v .comment .cont_01 h2{
+    letter-spacing: .2em;
+    font-size: 3em;
+    font-weight: bold;
+    color: #fff;
+}
+
+.main_v .comment .cont_01 h2 span{
+    display: block;
+    letter-spacing: .4em;
+    font-size: .4em;
+    font-weight: 100;
+}
+
+.main_v .comment .cont_01 .btn_01{
+    margin: 1em auto;
+    padding: .7em;
+    width: 50%;
+    background-color: #fff;
+    border-radius: 5px;
+    
+}
+.main_v .comment .cont_01 .btn_01 p{
+    letter-spacing: .2em;
+    color: #222;
+    font-size: .7em;
+    font-weight: bold;
+}
+
+@media screen and (max-width:1050px) {
+    .main_v .comment{
+        height: 1000px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .main_v .comment .cont_01 h2{
+        font-size: 2em;
+    }
+    
+}
+
+/* コンセプトの部分 */
+.concept{
+    margin: 2em auto;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+}
+/* コンセプト左側 */
+.concept .left_cont{
+    padding: 8em 0 0 8em;
+    width: 50%;
+    text-align: center;
+}
+
+.concept .left_cont h2{
+    font-size: 2em;
+    color: #310;
+    font-weight: bold;
+}
+
+.concept .left_cont h2 span{
+    display: block;
+    margin: .5em;
+    font-size: .5em;
+}
+
+.concept .left_cont p{
+    display: block;
+    margin: 2em 0;
+    line-height: 2em;
+    color: #310;
+    font-size: .85em;
+}
+
+.concept .left_cont a{
+    color: orange;
+    font-size: 1.2em;
+}
+
+/* レスポンシブ用画像配置 */
+.concept .left_cont .sp_cont{
+    margin: 2em auto 0 auto;
+    width: 95%;
+    height: 250px;
+    display: none;
+    justify-content: space-between;
+}
+
+.concept .left_cont .sp_cont img{
+    width: 49%;
+    object-fit: cover;
+}
+
+/* コンセプト右側 */
+.concept .right_cont{
+    padding: 0 10em 0 4em ;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.concept .right_cont img{
+    width: 49%;
+    object-fit: cover;
+}
+
+@media screen and (max-width:1490px) {
+    .concept .left_cont p{
+        font-size: .7em;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .concept{
+        width: 100%;
+    }
+
+    .concept .left_cont{
+        padding: 8em 0 0 5em;
+    }
+    .concept .left_cont p{
+        margin: 3em 0;
+        font-size: .5em;
+        line-height: 4em;
+        
+    }
+
+    .concept .right_cont{
+        padding: 0 5em 0 4em ;
+    }
+}
+
+@media screen and (max-width:1050px) {
+    .concept{
+        margin: 3em auto;
+        width: 80%;
+    }
+
+    .concept .left_cont{
+        width: 100%;
+        padding: 0;
+    }
+
+    .concept .left_cont p{
+        font-size: 1em;
+        line-height: 2em;
+    }
+
+    .concept .left_cont .sp_cont{
+        display: flex;
+    }
+
+    .concept .right_cont{
+        display: none;
+    }   
+}
+
+@media screen and (max-width:900px) {
+    .concept{
+        margin: 3em auto;
+        width: 95%;
+    }
+}
+
+@media screen and (max-width:660px) {
+    .concept .left_cont p{
+        font-size: .8em;
+        line-height: 2em;
+    }
+}
+
+@media screen and (max-width:530px) {
+    .concept .left_cont h2{
+        font-size: 1.5em;
+    }
+
+    .concept .left_cont p{
+        font-size: .75em;
+        line-height: 2em;
+    }
+}
+
+@media screen and (max-width:490px) {
+    .concept{
+        margin: 3em auto;
+        width: 100%;
+    }
+    .concept .left_cont p{
+        margin: 1em;
+        font-size: .7em;
+        line-height: 2em;
+    }
+
+    .concept .left_cont .sp_cont{
+        margin: 1em auto 0 auto;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width:410px) {
+    .concept .left_cont p{
+        font-size: .5em;
+        line-height: 2em;
+    }
+}
+
+/* 横並び写真３枚 */
+.img_box01{
+    position: relative;
+    width: 100%;
+    margin: 3em 5px;
+}
+
+.img_box01::before{
+    content: "";
+    display: block;
+    padding-top: 50%;
+}
+.img_box01 .img_box02{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.img_box01 .img_box02 img{
+    width: 32%;
+    object-fit: cover;
+}
+
+/* BEST ONE */
+.best_one{
+    margin: 1em auto;
+    width: 90%;
+    text-align: center;
+}
+
+.best_one h2{
+    font-size: 2em;
+    color: #310;
+    font-weight: bold;
+}
+
+.best_one h2 span{
+    display: block;
+    margin: 1em 0;
+    font-size: .5em;
+}
+
+.best_one img{
+    margin: 2em 0;
+    width: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width:1050px) {
+    .best_one{
+        margin: 1em 5px;
+        width: 100%;
+    }
+
+    .best_one h2{
+        font-size: 3em;
+    }
+
+    .best_one img{
+        margin: 1em 0;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .best_one h2{
+        font-size: 1.7em;
+    }
+
+    .best_one img{
+        margin: .5em 0;
+    }
+
+    .best_one h2 span{
+        margin: .5em 0;
+    }
+}
+
+/* PLAN */
+.plan{
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+/* 左側 */
+.plan .left_cont02{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.plan .left_cont02 img{
+    width: 49%;
+    object-fit: cover;
+}
+
+.plan .left_cont02 img:nth-of-type(1),
+.plan .left_cont02 img:nth-of-type(2){
+    margin-bottom: 1em;
+
+}
+
+/* 右側 */
+.plan .right_cont02{
+    padding: 6em 0 0 0;
+    width: 50%;
+    text-align: center;
+    color: #310;
+}
+
+.plan .right_cont02 h2{
+    margin-top: 2em;
+    font-size: 2em;
+    font-weight: bold;
+
+
+}
+
+.plan .right_cont02 h2 span{
+    display: block;
+    font-size: .5em;
+
+}
+
+.plan .right_cont02 p{
+    margin: 3em;
+    font-size: .8em;
+
+}
+
+.plan .right_cont02 a{
+    color: orange;
+    font-size: 1.2em;
+}
+
+/* レスポンシブ用 */
+.plan .sp_cont02{
+    margin: 0 auto;
+    width: 95%;
+    display: none;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.plan .sp_cont02 img{
+    width: 49%;
+    object-fit: cover;
+}
+
+.plan .sp_cont02 img:nth-of-type(1),
+.plan .sp_cont02 img:nth-of-type(2){
+    margin-bottom: 1em;
+
+}
+
+
+@media screen and (max-width:1100px) {
+    .plan{
+        margin: 0 5px;
+        width: 100%;
+    }
+
+    .plan .right_cont02{
+        padding: 6em 0 0 5px;
+    }
+    
+}
+
+@media screen and (max-width:980px) {
+    .plan{
+        flex-wrap: wrap;
+    }
+
+    .plan .left_cont02{
+        display: none;
+    }
+    
+    .plan .right_cont02{
+        padding: 0;
+        margin-bottom: 3em;
+        width: 100%;
+    }
+
+    .plan .sp_cont02{
+        display: flex;
+    }
+
+}
+
+@media screen and (max-width:750px) {
+    .plan .right_cont02 h2{
+        font-size: 3em;
+    }
+
+    .plan .right_cont02 p{
+        font-size: 1em;
+        line-height: 2em;
+    }
+}
+
+@media screen and (max-width:610px) {
+    .plan .right_cont02{
+        margin-bottom: 1em;
+    }
+
+    .plan .right_cont02 h2{
+        font-size: 1.8em;
+    }
+    .plan .right_cont02 p{
+        margin: 1em;
+        text-align: left;
+    }
+}
+
+/* 人生で最も輝く１枚 */
+.best_shot{
+    position: relative;
+    z-index: 0;
+    margin: 3em auto;
+    height: 700px;
+    background: url(./img/clothing_talk_img.jpg);
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+.best_shot .filter{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    background-color: #033c5e;
+    opacity: 0.5;
+
+}
+
+.best_shot .text{
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.best_shot .text h2{
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.best_shot .text h2 span{
+    display: block;
+    font-size: .3em;
+}
+
+@media screen and (max-width:600px) {
+    .best_shot .text h2{
+        font-size: 2.5em;
+        line-height: 2em;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .best_shot .text h2{
+        font-size: 2em;
+        line-height: 1.5em;
+    }
+}
+
+.form_box{
+    margin: 7em auto;
+    max-width: 700px;
+}
+
+.form_box .form_text{
+    text-align: center;
+    color: #310;
+
+}
+
+.form_box .form_text h2{
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.form_box .form_text h2 span{
+    margin: 1em 0 3em 0;
+    display: block;
+    font-size: .5em;
+    font-weight: 100;
+    line-height: 2em;
+}
+
+.form_box form{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.form_box form p{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5em;
+}
+
+.form_box form p label{
+    display: flex;
+    width: 150px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.form_box form p:nth-of-type(4) {
+    display: flex;
+    align-items: flex-start;
+}
+
+.form_box form p label:nth-of-type(4){
+    margin-top: 1em;
+}
+
+.form_box form p label span{
+    margin: 1em;
+    padding: 0 .5em;
+    background-color: #310;
+    font-size: .6em;
+    color: #fff;
+}
+
+.form_box form p input,
+.form_box form p textarea{
+    padding: .4em 0;
+    width: 30em;
+    border: none;
+    background-color: #eee;
+}
+
+::placeholder{
+    padding-left: .5em;
+}
+
+.form_box form .btn{
+    display: block;
+    margin: 3em auto 0 auto;
+    padding: 1em 3em;
+    border: none;
+    border-radius: 10px;
+    background-color: orange;
+    color: #fff;
+    text-shadow: #aaa 2px 1px;
+    
+}
+
+@media screen and (max-width:750px) {
+    .form_box .form_text{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .form_box .form_text h2 span{
+        text-align: left;
+    }
+
+    .form_box form{
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .form_box form p{
+        flex-wrap: wrap;
+    }
+
+    .form_box form p label,
+    .form_box form p input,
+    .form_box form p textarea{
+        width: 100%;
+    }
+
+    .form_box form p label{
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .form_box .form_text h2 span{
+        margin: 1em 0 1em 0;
+    }
+}
+
+/* フッター部分 */
+footer nav{
+    height: 200px;
+    background-color: rgb(2, 44, 92);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer nav ul{
+    margin: 0 auto;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer nav ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+footer .copyright{
+    padding: 1.5em 0;
+    background-color: rgb(0, 64, 107);
+    text-align: center;
+    color: #fff;
+    font-size: 1vw;
+}
+
+@media screen and (max-width:1100px) {
+    footer nav ul{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:750px) {
+    footer nav ul{
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    footer nav ul li{
+        width: 33%;
+    }
+}
+
+@media screen and (max-width:640px) {
+    footer nav{
+        height: 100px;
+    }
+    footer nav ul{
+        width: 95%;
+    }
+}
